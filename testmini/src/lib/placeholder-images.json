@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "farm-background",
+      "description": "A lush green farm field under a blue sky",
+      "imageUrl": "https://picsum.photos/seed/farmbg/1200/1800",
+      "imageHint": "farm field"
+    }
+  ]
+}

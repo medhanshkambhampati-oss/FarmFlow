@@ -1,0 +1,30 @@
+# Node
+node_modules/
+dist/
+
+# Environment variables
+.env
+.env*
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+build/
+
+# Logs
+*.log
+
+.idx/
+.modified
+
+python_backend/npk_model.pkl
