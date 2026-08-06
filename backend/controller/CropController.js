@@ -28,7 +28,7 @@ const addCrop = async (req, res) => {
         // Call Python ML backend to predict post-harvest NPK values
         let postN, postP, postK;
         try {
-            const response = await axios.post("http://127.0.0.1:5000/predict_post_harvest", {
+            const response = await axios.post("https://farmflow-75rr.onrender.com/predict_post_harvest", {
                 crop: cname,
                 n: preN,
                 p: preP,
@@ -139,8 +139,8 @@ const deleteCrop = async (req, res) => {
                         c.np = response.data.np ?? currentP;
                         c.nk = response.data.nk ?? currentK;
                     } catch (mlErr) {
-                        // If ML fails, keep existing post-harvest values
-                        console.log("ML recalc failed for", c.name, "- keeping existing values");
+                        console.log("ML recalc failed for", c.name);
+                        console.log(mlErr.message);
                     }
 
                     // Move to next crop's starting point
