@@ -129,7 +129,7 @@ const deleteCrop = async (req, res) => {
 
                     // Recalculate post-harvest via Python ML
                     try {
-                        const response = await axios.post("http://127.0.0.1:5000/predict_post_harvest", {
+                        const response = await axios.post("https://farmflow-75rr.onrender.com/predict_post_harvest", {
                             crop: c.name,
                             n: currentN,
                             p: currentP,

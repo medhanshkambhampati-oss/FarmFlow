@@ -122,7 +122,7 @@ const cropPrediction = async (req, res) => {
         const currentMonth = new Date().getMonth() + 1;
 
         const mlResponse = await axios.post(
-            "http://127.0.0.1:5000/predict",
+            "https://farmflow-75rr.onrender.com/predict",
             {
                 N: soilN,
                 P: soilP,
@@ -431,7 +431,7 @@ const yieldPrediction = async (req, res) => {
 
         // ── Call ML Backend ──────────────────────────────
         const mlRes = await axios.post(
-            "http://127.0.0.1:5000/predict_yield",
+            "https://farmflow-75rr.onrender.com/predict_yield",
             mlPayload,
             { timeout: 15000 }
         );
